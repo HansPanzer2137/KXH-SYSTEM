@@ -35,6 +35,4 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-
-
-source include/dpp.sh
+source include/basic.sh
