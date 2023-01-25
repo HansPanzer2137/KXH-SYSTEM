@@ -36,12 +36,5 @@ if [ "$EUID" -ne 0 ]
 fi
 
 
-#check if all file are present
-for FILE in include/colors.sh include/dpp.sh
-do  
-    if test -f "$FILE"; then
-        echo -e "$FILE          ${Green}exists.${Color_Off}"
-    fi
-done
 
 source include/dpp.sh
