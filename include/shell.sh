@@ -39,7 +39,7 @@ init_systems(){
     case $system_name in
         "drone") source include/dpp.sh;;
         "server") source include/server.sh;;
-        "client") source include/client.sh;;
+        "client") source include/net/client.sh;;
         "show systems") echo -e "Avalible systems: \nDrone  [${Green}AVALIBLE${Color_off}]\nServer    [${Red}NOT AVALIBLE${Color_off}]\nClient    [${Red}NOT AVALIBLE${Color_off}]";;
         * ) echo "System not found";;
     esac

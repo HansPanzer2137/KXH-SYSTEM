@@ -13,6 +13,9 @@ halfheight=$(($height/2))
 # write function for writing in center of screen progress bar and in bootom on screen write actual  package name and status of exist or not
 
 drone_status(){
+    #print drone_basic file
+    cat include/drone_basic
+
     echo -e "${BWhite}Drone system status:${Color_Off} ${Green}online${Color_Off}"
     echo -e "${BWhite}Drone system version:${Color_Off} ${White}0.1${Color_Off}"
     echo -e "${BWhite}Drone system name:${Color_Off} ${White}KXH-RESEARCH${Color_Off}"
@@ -46,6 +49,7 @@ while true; do
     case $command in
         "help" ) echo "help";;
         "exit" ) break;;
+        "exit --all") exit;;
         "clear") cls;;
         "drone-status" ) drone_status;;
         * ) echo "Command not found";;
